@@ -5,9 +5,9 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import lombok.RequiredArgsConstructor;
+import com.taskapi.taskapi.tasks.domain.models.entity.Task;
 
-import com.taskapi.taskapi.tasks.models.Task;
+import lombok.RequiredArgsConstructor;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -17,10 +17,18 @@ import java.util.List;
 @RequiredArgsConstructor
 public class TaskController {
     
+
+    // read
     @GetMapping
     public ResponseEntity<List<Task>> getAllTasks(){
         List<Task> tasks = new ArrayList<>();
         tasks.add(new Task(1L, "Tarea #1", "Descripcion #1", false));
         return ResponseEntity.ok(tasks);
     }
+
+    // create
+
+    // update
+
+    // delete
 }

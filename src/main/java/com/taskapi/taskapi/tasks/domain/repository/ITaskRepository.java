@@ -12,6 +12,6 @@ public interface ITaskRepository extends JpaRepository<Task, Long> {
     // Update
     // Delete
 
-    // Custom
+    // Custom query method to find tasks by status
     List<Task> findByStatus(boolean status);
 }
